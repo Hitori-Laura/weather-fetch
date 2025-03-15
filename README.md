@@ -3,4 +3,6 @@ CLI app written in python that fetches your position with the geocoder library a
 ```bash
 pip install git+https://github.com/Hitori-Laura/weather-fetch.git 
 
+
+
 AUR package coming soon
