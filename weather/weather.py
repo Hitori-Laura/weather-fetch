@@ -62,4 +62,4 @@ def main():
     print(Fore.RED + f"Temperature: {data['current_weather']['temperature']}°C")
     print(Fore.YELLOW + f"Wind Speed: {data['current_weather']['windspeed']} km/h")
     print(Fore.BLUE + f"Wind Direction: {data['current_weather']['winddirection']}°")
-
+    print(Style.RESET_ALL)
