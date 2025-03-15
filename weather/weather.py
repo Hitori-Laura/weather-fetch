@@ -53,7 +53,7 @@ def main():
             print(Fore.BLUE + file.read())
         print("It's foggy")
     elif weather_code in [51, 53, 55, 61, 63, 65, 80, 81, 82]:  # Rain codes
-        with open(os.path.join(ascii_art_path, "/rainy.txt"), "r") as file:
+        with open(os.path.join(ascii_art_path, "rainy.txt"), "r") as file:
             print(Fore.BLUE + file.read())
         print("It's raining")
     else:
