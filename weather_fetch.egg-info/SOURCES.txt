@@ -1,8 +1,13 @@
+MANIFEST.in
 README.md
 pyproject.toml
 setup.py
 weather/__init__.py
 weather/weather.py
+weather/ASCII_art/cloudy.txt
+weather/ASCII_art/foggy.txt
+weather/ASCII_art/rainy.txt
+weather/ASCII_art/sunny.txt
 weather_fetch.egg-info/PKG-INFO
 weather_fetch.egg-info/SOURCES.txt
 weather_fetch.egg-info/dependency_links.txt

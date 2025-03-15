@@ -1,11 +1,14 @@
 import geocoder
 import requests
 from colorama import Fore, Back, Style
+import os
 
 def main():
     # Get current location based on IP address
     g = geocoder.ip('me')
     
+    script_dir = os.path.dirname(__file__)
+    ascii_art_path = os.path.join(script_dir, 'ASCII_art')
     printcity = str.capitalize(input('Do you want to show the city name? "Y, N": '))
 
     if printcity == "Y":
@@ -35,22 +38,22 @@ def main():
         print(Fore.RED + f"Weather in {city}:")
     else:
         print(Fore.RED + "The weather:")
-
+    
     # Define weather conditions
     if weather_code == 0:
-        with open("ASCII_art/sunny.txt", "r") as file:
+        with open(os.path.join(ascii_art_path, "sunny.txt"), "r") as file:
             print(Fore.YELLOW + file.read())
         print("It's sunny")
     elif weather_code in [1, 2, 3]:  # Partly cloudy to overcast (could still be sunny)
-        with open("ASCII_art/cloudy.txt", "r") as file:
+        with open(os.path.join(ascii_art_path, "cloudy.txt"), "r") as file:
             print(Fore.YELLOW + file.read())
         print("It's partly cloudy")
     elif weather_code in [45, 48]:  # Fog
-        with open("ASCII_art/foggy.txt", "r") as file:
+        with open(os.path.join(ascii_art_path, "foggy.txt"), "r") as file:
             print(Fore.BLUE + file.read())
         print("It's foggy")
     elif weather_code in [51, 53, 55, 61, 63, 65, 80, 81, 82]:  # Rain codes
-        with open("ASCII_art/rainy.txt", "r") as file:
+        with open(os.path.join(ascii_art_path, "/rainy.txt"), "r") as file:
             print(Fore.BLUE + file.read())
         print("It's raining")
     else:
