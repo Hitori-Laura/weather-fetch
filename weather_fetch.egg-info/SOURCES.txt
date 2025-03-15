@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+weather/__init__.py
+weather/weather.py
+weather_fetch.egg-info/PKG-INFO
+weather_fetch.egg-info/SOURCES.txt
+weather_fetch.egg-info/dependency_links.txt
+weather_fetch.egg-info/entry_points.txt
+weather_fetch.egg-info/requires.txt
+weather_fetch.egg-info/top_level.txt
