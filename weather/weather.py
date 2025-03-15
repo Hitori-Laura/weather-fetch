@@ -1,5 +1,6 @@
 import geocoder
 import requests
+import os
 from colorama import Fore, Back, Style
 def main():
      # Get current location based on IP address
@@ -30,19 +31,23 @@ def main():
      # Define weather conditions
 
      if weather_code == 0:
-             with open("ASCII_art/sunny.txt", "r") as file:
+             file_path = os.path.join(os.path.dirname(__file__), 'ASCII_art', 'sunny.txt')
+             with open(file_path, "r") as file:
                   print(Fore.YELLOW+file.read())
              print("It's sunny")
      elif weather_code in [1, 2, 3]: # Partly cloudy to overcast (could still be sunny)
-             with open("ASCII_art/cloudy.txt", "r") as file:
+             file_path = os.path.join(os.path.dirname(__file__), 'ASCII_art', 'cloudy.txt')
+             with open(file_path, "r") as file:
                   print(Fore.YELLOW+file.read())
              print("It's partly cloudy")
      elif weather_code in [45, 48]:  # Fog
-             with open("ASCII_art/foggy.txt", "r") as file:
+             file_path = os.path.join(os.path.dirname(__file__), 'ASCII_art', 'foggy.txt')
+             with open(file_path, "r") as file:
                   print(Fore.BLUE+file.read())
              print("It's foggy")
      elif weather_code in [51, 53, 55, 61, 63, 65, 80, 81, 82]:  # Rain codes
-             with open("ASCII_art/rainy.txt", "r") as file:
+             file_path = os.path.join(os.path.dirname(__file__), 'ASCII_art', 'rainy.txt')
+             with open(file_path, "r") as file:
                   print(Fore.BLUE+file.read())
              print("It's raining")
      else:

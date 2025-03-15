@@ -1,4 +1,4 @@
 coder
 requests
 colorama
-
+os
