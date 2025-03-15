@@ -1,4 +1,4 @@
-Maintainer: Hitori-Laura <hitori_laura_sorgente@proton.me>
+#Maintainer: Hitori-Laura <hitori_laura_sorgente@proton.me>
 pkgname=weather-fetch
 pkgver=1.0.0
 pkgrel=1
@@ -9,7 +9,7 @@ license=('GPL3')
 depends=('python' 'python-geocoder' 'python-requests')
 makedepends=('python-setuptools')
 source=("git+https://github.com/Hitori-Laura/weather-fetch.git")
-sha256sums=('SKIP')  # Using git source, so no need for sha256sum
+sha256sums=('SKIP') # Using git source, so no need for sha256sum
 
 # Prepare function to set up the environment
 prepare() {
@@ -28,4 +28,3 @@ package() {
   cd "$srcdir/weather-fetch"
   python setup.py install --root="$pkgdir/" --optimize=1
 }
-
