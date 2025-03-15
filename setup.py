@@ -7,8 +7,7 @@ setup(
     install_requires=[
         "geocoder",
         "requests",
-        "colorama",
-        "os"
+        "colorama"
     ],
     entry_points={
         "console_scripts": [
